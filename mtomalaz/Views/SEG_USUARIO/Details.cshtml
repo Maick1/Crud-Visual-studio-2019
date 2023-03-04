@@ -1,0 +1,99 @@
+﻿@model mtomalaz.DataBAse.SEG_USUARIO
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>SEG_USUARIO</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.USU_Login)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.USU_Login)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ENT_Id_Entidad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ENT_Id_Entidad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.USU_Password)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.USU_Password)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.USU_Discoduro)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.USU_Discoduro)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.USU_Ip)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.USU_Ip)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.USU_Creacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.USU_Creacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.USU_Activacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.USU_Activacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.USU_Fechabaja)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.USU_Fechabaja)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SEG_EMPRESA2.EMP_Representante)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SEG_EMPRESA2.EMP_Representante)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SEG_ESTADO_AI2.Gen_PrmSn_Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SEG_ESTADO_AI2.Gen_PrmSn_Descripcion)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Seg_Usr_Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

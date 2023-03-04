@@ -1,0 +1,88 @@
+﻿@model IEnumerable<mtomalaz.DataBAse.SEG_USUARIO>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.USU_Login)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ENT_Id_Entidad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.USU_Password)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.USU_Discoduro)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.USU_Ip)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.USU_Creacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.USU_Activacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.USU_Fechabaja)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SEG_EMPRESA2.EMP_Representante)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SEG_ESTADO_AI2.Gen_PrmSn_Descripcion)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.USU_Login)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ENT_Id_Entidad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.USU_Password)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.USU_Discoduro)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.USU_Ip)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.USU_Creacion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.USU_Activacion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.USU_Fechabaja)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SEG_EMPRESA2.EMP_Representante)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SEG_ESTADO_AI2.Gen_PrmSn_Descripcion)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Seg_Usr_Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Seg_Usr_Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Seg_Usr_Id })
+        </td>
+    </tr>
+}
+
+</table>
