@@ -1,0 +1,142 @@
+﻿@model IEnumerable<mtomalaz.DataBAse.SEG_CAB_PURGA>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CAB_Id_Purga)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.USU_Login)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CAB_Fecha)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CAB_Tabla)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CAB_Modulo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.USU_Elim)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.USU_Fecelim)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.USU_Con)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.USU_Feccon)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.USU_Rep)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.USU_Fecrep)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Aud_Fecha_Ingreso)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Aud_PC_Ingreso)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Aud_Fecha_Modifica)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Aud_PC_Modifica)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SEG_EMPRESA.EMP_Representante)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SEG_ESTADO_AI.Gen_PrmSn_Descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SEG_USUARIO.USU_Login)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SEG_USUARIO1.USU_Login)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CAB_Id_Purga)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.USU_Login)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CAB_Fecha)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CAB_Tabla)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CAB_Modulo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.USU_Elim)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.USU_Fecelim)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.USU_Con)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.USU_Feccon)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.USU_Rep)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.USU_Fecrep)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Aud_Fecha_Ingreso)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Aud_PC_Ingreso)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Aud_Fecha_Modifica)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Aud_PC_Modifica)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SEG_EMPRESA.EMP_Representante)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SEG_ESTADO_AI.Gen_PrmSn_Descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SEG_USUARIO.USU_Login)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SEG_USUARIO1.USU_Login)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.SEG_CAB_PURGA_Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.SEG_CAB_PURGA_Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.SEG_CAB_PURGA_Id })
+        </td>
+    </tr>
+}
+
+</table>

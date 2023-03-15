@@ -1,0 +1,163 @@
+﻿@model mtomalaz.DataBAse.SEG_MENU
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>SEG_MENU</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MEN_Id_Menu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MEN_Id_Menu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MEN_Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MEN_Descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MEN_Nivel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MEN_Nivel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MEN_Tipo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MEN_Tipo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MEN_Direccion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MEN_Direccion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MEN_Ingreso)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MEN_Ingreso)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MEN_Multiple)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MEN_Multiple)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MEN_Reporte)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MEN_Reporte)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MEN_Ruta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MEN_Ruta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MEN_Estado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MEN_Estado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Aud_Fecha_Ingreso)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Aud_Fecha_Ingreso)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Aud_PC_Ingreso)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Aud_PC_Ingreso)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Aud_Fecha_Modifica)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Aud_Fecha_Modifica)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Aud_PC_Modifica)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Aud_PC_Modifica)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SEG_EMPRESA.EMP_Representante)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SEG_EMPRESA.EMP_Representante)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SEG_ESTADO_AI.Gen_PrmSn_Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SEG_ESTADO_AI.Gen_PrmSn_Descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SEG_USUARIO.USU_Login)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SEG_USUARIO.USU_Login)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SEG_USUARIO1.USU_Login)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SEG_USUARIO1.USU_Login)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.SEG_MENU_Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

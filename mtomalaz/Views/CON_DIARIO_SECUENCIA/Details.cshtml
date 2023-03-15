@@ -1,0 +1,115 @@
+﻿@model mtomalaz.DataBAse.CON_DIARIO_SECUENCIA
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CON_DIARIO_SECUENCIA</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Con_CompSec_Numero)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Con_CompSec_Numero)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Aud_Fecha_Ingreso)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Aud_Fecha_Ingreso)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Aud_PC_Ingreso)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Aud_PC_Ingreso)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Aud_Fecha_Modifica)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Aud_Fecha_Modifica)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Aud_PC_Modifica)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Aud_PC_Modifica)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GEN_ANIO.Gen_PrmAnio_Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GEN_ANIO.Gen_PrmAnio_Descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SEG_EMPRESA.EMP_Representante)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SEG_EMPRESA.EMP_Representante)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SEG_ESTADO_AI.Gen_PrmSn_Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SEG_ESTADO_AI.Gen_PrmSn_Descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SEG_USUARIO.USU_Login)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SEG_USUARIO.USU_Login)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GEN_MES.Gen_PrmMes_Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GEN_MES.Gen_PrmMes_Descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SEG_USUARIO1.USU_Login)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SEG_USUARIO1.USU_Login)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CON_DIARIO_TIPO.Con_CompTip_Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CON_DIARIO_TIPO.Con_CompTip_Nombre)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Con_CompSec_Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

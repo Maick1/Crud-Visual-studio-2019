@@ -1,0 +1,177 @@
+﻿@model mtomalaz.DataBAse.BCO_BANCOS
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>BCO_BANCOS</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Bco_Ban_Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bco_Ban_Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Bco_Ban_Agencia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bco_Ban_Agencia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Bco_Ban_RUC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bco_Ban_RUC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Bco_Ban_Direccion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bco_Ban_Direccion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Bco_Ban_OficialCta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bco_Ban_OficialCta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Bco_Ban_Telefono)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bco_Ban_Telefono)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Bco_Ban_Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bco_Ban_Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Aud_Fecha_Ingreso)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Aud_Fecha_Ingreso)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Aud_PC_Ingreso)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Aud_PC_Ingreso)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Aud_Fecha_Modifica)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Aud_Fecha_Modifica)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Aud_PC_Modifica)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Aud_PC_Modifica)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GEN_PRM_GEOI_CIUDAD.Gen_PrmCiu_Codigo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GEN_PRM_GEOI_CIUDAD.Gen_PrmCiu_Codigo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SEG_ESTADO_AI.Gen_PrmSn_Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SEG_ESTADO_AI.Gen_PrmSn_Descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BCO_CODIGO_FINANCIERO.Bco_CodFinan_Codigo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BCO_CODIGO_FINANCIERO.Bco_CodFinan_Codigo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SEG_USUARIO.USU_Login)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SEG_USUARIO.USU_Login)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SEG_USUARIO1.USU_Login)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SEG_USUARIO1.USU_Login)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GEN_PRM_GEOA_PAISES.Gen_PrmPai_Codigo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GEN_PRM_GEOA_PAISES.Gen_PrmPai_Codigo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GEN_PRM_GEOE_PROVINCIAS.Gen_PrmPro_Codigo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GEN_PRM_GEOE_PROVINCIAS.Gen_PrmPro_Codigo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GEN_PRM_GEOO_PARROQUIAS.Gen_PrmPrq_Codigo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GEN_PRM_GEOO_PARROQUIAS.Gen_PrmPrq_Codigo)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

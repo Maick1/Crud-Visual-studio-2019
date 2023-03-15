@@ -1,0 +1,195 @@
+﻿@model mtomalaz.DataBAse.COM_CAB_ORDEN
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>COM_CAB_ORDEN</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SOL_Id_Solicitud)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SOL_Id_Solicitud)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ENT_Id_PEntidad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ENT_Id_PEntidad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ENT_Id_Entidad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ENT_Id_Entidad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CAB_FechaPedido)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CAB_FechaPedido)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CAB_FechaEmitida)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CAB_FechaEmitida)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CAB_Estado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CAB_Estado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CAB_Hora)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CAB_Hora)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CAB_Observacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CAB_Observacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CAB_Descuento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CAB_Descuento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CAB_Iva)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CAB_Iva)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CAB_Total)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CAB_Total)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CAB_Ajuste)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CAB_Ajuste)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CAB_Prioridad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CAB_Prioridad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CAB_Tipo_Producto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CAB_Tipo_Producto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Aud_Fecha_Ingreso)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Aud_Fecha_Ingreso)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Aud_PC_Ingreso)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Aud_PC_Ingreso)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Aud_Fecha_Modifica)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Aud_Fecha_Modifica)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Aud_PC_Modifica)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Aud_PC_Modifica)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SEG_EMPRESA.EMP_Representante)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SEG_EMPRESA.EMP_Representante)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SEG_ESTADO_AI.Gen_PrmSn_Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SEG_ESTADO_AI.Gen_PrmSn_Descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SEG_USUARIO.USU_Login)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SEG_USUARIO.USU_Login)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SEG_USUARIO1.USU_Login)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SEG_USUARIO1.USU_Login)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CAB_Orden_Cab_Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

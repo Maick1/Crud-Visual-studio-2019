@@ -1,0 +1,139 @@
+﻿@model mtomalaz.DataBAse.BCO_CUENTA_BANCOS
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>BCO_CUENTA_BANCOS</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Bco_Cta_Numero)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bco_Cta_Numero)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Bco_Cta_FecApertura)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bco_Cta_FecApertura)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Bco_Cta_UltCheq)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bco_Cta_UltCheq)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Bco_Cta_FecUltCheq)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bco_Cta_FecUltCheq)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Aud_Fecha_Ingreso)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Aud_Fecha_Ingreso)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Aud_PC_Ingreso)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Aud_PC_Ingreso)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Aud_Fecha_Modifica)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Aud_Fecha_Modifica)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Aud_PC_Modifica)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Aud_PC_Modifica)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BCO_BANCOS.Bco_Ban_Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BCO_BANCOS.Bco_Ban_Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SEG_EMPRESA.EMP_Representante)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SEG_EMPRESA.EMP_Representante)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SEG_ESTADO_AI.Gen_PrmSn_Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SEG_ESTADO_AI.Gen_PrmSn_Descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SEG_USUARIO.USU_Login)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SEG_USUARIO.USU_Login)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SEG_USUARIO1.USU_Login)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SEG_USUARIO1.USU_Login)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CON_CUENTA_PLAN.Con_PlaCta_Cuenta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CON_CUENTA_PLAN.Con_PlaCta_Cuenta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BCO_CUENTA_TIPO.Bco_CtaTipo_Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BCO_CUENTA_TIPO.Bco_CtaTipo_Descripcion)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Bco_Cta_Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

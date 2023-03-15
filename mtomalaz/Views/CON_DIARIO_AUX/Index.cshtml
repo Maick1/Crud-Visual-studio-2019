@@ -1,0 +1,124 @@
+﻿@model IEnumerable<mtomalaz.DataBAse.CON_DIARIO_AUX>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Con_DiarioAux_Codigo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Con_DiarioAux_Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Con_DiarioAux_Glosa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Con_DiarioAux_Total)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Aud_Fecha_Ingreso)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Aud_PC_Ingreso)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Aud_Fecha_Modifica)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Aud_PC_Modifica)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CON_CENTRO_COSTOS.Con_CCos_Codigo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CON_DIARIO_AUX_TIPO.Con_Aux_Descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CON_DIARIO_CAB.Con_DiarioCab_Numero)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CON_DIARIO_DET.Con_DiarioDet_Glosa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SEG_EMPRESA.EMP_Representante)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SEG_ESTADO_AI.Gen_PrmSn_Descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SEG_USUARIO.USU_Login)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SEG_USUARIO1.USU_Login)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Con_DiarioAux_Codigo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Con_DiarioAux_Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Con_DiarioAux_Glosa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Con_DiarioAux_Total)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Aud_Fecha_Ingreso)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Aud_PC_Ingreso)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Aud_Fecha_Modifica)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Aud_PC_Modifica)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CON_CENTRO_COSTOS.Con_CCos_Codigo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CON_DIARIO_AUX_TIPO.Con_Aux_Descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CON_DIARIO_CAB.Con_DiarioCab_Numero)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CON_DIARIO_DET.Con_DiarioDet_Glosa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SEG_EMPRESA.EMP_Representante)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SEG_ESTADO_AI.Gen_PrmSn_Descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SEG_USUARIO.USU_Login)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SEG_USUARIO1.USU_Login)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Con_DiarioAux_Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Con_DiarioAux_Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Con_DiarioAux_Id })
+        </td>
+    </tr>
+}
+
+</table>

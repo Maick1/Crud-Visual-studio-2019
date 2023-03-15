@@ -1,0 +1,130 @@
+﻿@model IEnumerable<mtomalaz.DataBAse.GEN_PRM_GEOA_PAISES>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Gen_PrmPai_Codigo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Gen_PrmPai_Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Gen_PrmPai_CodTelefono)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Gen_PrmPai_Nacionalidad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Gen_PrmPai_CodigoSri)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Gen_PrmPai_COI)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Gen_PrmPai_Dominio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Gen_PrmPai_ISO_Alpha2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Gen_PrmPai_ISO_Alpha3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Gen_PrmPai_ISO_Numerico)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Aud_Fecha_Ingreso)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Aud_PC_Ingreso)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Aud_Fecha_Modifica)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Aud_PC_Modifica)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SEG_ESTADO_AI.Gen_PrmSn_Descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SEG_USUARIO.USU_Login)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SEG_USUARIO1.USU_Login)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Gen_PrmPai_Codigo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Gen_PrmPai_Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Gen_PrmPai_CodTelefono)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Gen_PrmPai_Nacionalidad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Gen_PrmPai_CodigoSri)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Gen_PrmPai_COI)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Gen_PrmPai_Dominio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Gen_PrmPai_ISO_Alpha2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Gen_PrmPai_ISO_Alpha3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Gen_PrmPai_ISO_Numerico)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Aud_Fecha_Ingreso)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Aud_PC_Ingreso)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Aud_Fecha_Modifica)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Aud_PC_Modifica)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SEG_ESTADO_AI.Gen_PrmSn_Descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SEG_USUARIO.USU_Login)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SEG_USUARIO1.USU_Login)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Gen_PrmPai_Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Gen_PrmPai_Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Gen_PrmPai_Id })
+        </td>
+    </tr>
+}
+
+</table>

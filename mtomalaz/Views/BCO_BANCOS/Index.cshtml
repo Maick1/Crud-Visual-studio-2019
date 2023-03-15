@@ -1,0 +1,142 @@
+﻿@model IEnumerable<mtomalaz.DataBAse.BCO_BANCOS>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Bco_Ban_Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Bco_Ban_Agencia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Bco_Ban_RUC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Bco_Ban_Direccion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Bco_Ban_OficialCta)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Bco_Ban_Telefono)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Bco_Ban_Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Aud_Fecha_Ingreso)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Aud_PC_Ingreso)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Aud_Fecha_Modifica)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Aud_PC_Modifica)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GEN_PRM_GEOI_CIUDAD.Gen_PrmCiu_Codigo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SEG_ESTADO_AI.Gen_PrmSn_Descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BCO_CODIGO_FINANCIERO.Bco_CodFinan_Codigo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SEG_USUARIO.USU_Login)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SEG_USUARIO1.USU_Login)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GEN_PRM_GEOA_PAISES.Gen_PrmPai_Codigo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GEN_PRM_GEOE_PROVINCIAS.Gen_PrmPro_Codigo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GEN_PRM_GEOO_PARROQUIAS.Gen_PrmPrq_Codigo)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Bco_Ban_Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Bco_Ban_Agencia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Bco_Ban_RUC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Bco_Ban_Direccion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Bco_Ban_OficialCta)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Bco_Ban_Telefono)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Bco_Ban_Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Aud_Fecha_Ingreso)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Aud_PC_Ingreso)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Aud_Fecha_Modifica)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Aud_PC_Modifica)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GEN_PRM_GEOI_CIUDAD.Gen_PrmCiu_Codigo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SEG_ESTADO_AI.Gen_PrmSn_Descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BCO_CODIGO_FINANCIERO.Bco_CodFinan_Codigo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SEG_USUARIO.USU_Login)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SEG_USUARIO1.USU_Login)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GEN_PRM_GEOA_PAISES.Gen_PrmPai_Codigo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GEN_PRM_GEOE_PROVINCIAS.Gen_PrmPro_Codigo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GEN_PRM_GEOO_PARROQUIAS.Gen_PrmPrq_Codigo)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Bco_Ban_Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Bco_Ban_Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Bco_Ban_Id })
+        </td>
+    </tr>
+}
+
+</table>

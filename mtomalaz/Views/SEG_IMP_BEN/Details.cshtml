@@ -1,0 +1,131 @@
+﻿@model mtomalaz.DataBAse.SEG_IMP_BEN
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>SEG_IMP_BEN</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.IMB_Id_Impben)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IMB_Id_Impben)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IMB_Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IMB_Descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IMB_Tipo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IMB_Tipo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IMB_Porcentaje)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IMB_Porcentaje)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IMB_Valor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IMB_Valor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IMB_Estado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IMB_Estado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Aud_Fecha_Ingreso)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Aud_Fecha_Ingreso)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Aud_PC_Ingreso)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Aud_PC_Ingreso)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Aud_Fecha_Modifica)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Aud_Fecha_Modifica)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Aud_PC_Modifica)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Aud_PC_Modifica)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SEG_EMPRESA.EMP_Representante)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SEG_EMPRESA.EMP_Representante)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SEG_ESTADO_AI.Gen_PrmSn_Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SEG_ESTADO_AI.Gen_PrmSn_Descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SEG_USUARIO.USU_Login)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SEG_USUARIO.USU_Login)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SEG_USUARIO1.USU_Login)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SEG_USUARIO1.USU_Login)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.SEG_IMP_BEN_Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

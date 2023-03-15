@@ -1,0 +1,137 @@
+﻿@model mtomalaz.DataBAse.SEG_CTA_BANCO
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>SEG_CTA_BANCO</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.BAN_Id_Banco)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BAN_Id_Banco)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CTA_Id_Cuenta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CTA_Id_Cuenta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ENT_Id_Entidad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ENT_Id_Entidad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CTA_Monto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CTA_Monto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CTA_Saldo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CTA_Saldo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CTA_Estado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CTA_Estado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Aud_Fecha_Ingreso)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Aud_Fecha_Ingreso)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Aud_PC_Ingreso)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Aud_PC_Ingreso)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Aud_Fecha_Modifica)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Aud_Fecha_Modifica)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Aud_PC_Modifica)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Aud_PC_Modifica)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SEG_EMPRESA.EMP_Representante)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SEG_EMPRESA.EMP_Representante)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SEG_ESTADO_AI.Gen_PrmSn_Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SEG_ESTADO_AI.Gen_PrmSn_Descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SEG_USUARIO.USU_Login)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SEG_USUARIO.USU_Login)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SEG_USUARIO1.USU_Login)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SEG_USUARIO1.USU_Login)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,147 @@
+﻿@model mtomalaz.DataBAse.SEG_PERFIL_EMP
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>SEG_PERFIL_EMP</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PEM_Id_Perfil)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PEM_Id_Perfil)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PEM_Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PEM_Descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PEM_Trm_i)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PEM_Trm_i)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PEM_Trm_m)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PEM_Trm_m)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PEM_Trm_e)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PEM_Trm_e)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PEM_Trm_c)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PEM_Trm_c)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PEM_Trm_r)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PEM_Trm_r)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PEM_Estado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PEM_Estado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Aud_Fecha_Ingreso)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Aud_Fecha_Ingreso)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Aud_PC_Ingreso)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Aud_PC_Ingreso)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Aud_Fecha_Modifica)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Aud_Fecha_Modifica)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Aud_PC_Modifica)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Aud_PC_Modifica)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SEG_EMPRESA.EMP_Representante)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SEG_EMPRESA.EMP_Representante)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SEG_ESTADO_AI.Gen_PrmSn_Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SEG_ESTADO_AI.Gen_PrmSn_Descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SEG_USUARIO.USU_Login)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SEG_USUARIO.USU_Login)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SEG_USUARIO1.USU_Login)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SEG_USUARIO1.USU_Login)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.SEG_PERFIL_EMP_Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

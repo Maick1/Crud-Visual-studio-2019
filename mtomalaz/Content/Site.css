@@ -1,24 +1,39 @@
 ﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+    background-color: #16A085; /* Cambia el color de fondo */
+    color: #333; /* Cambia el color de texto */
 }
 
-/* Set padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+img {
+    border: 3px solid #ddd; /* Agrega un borde de 3 píxeles con color gris claro */
 }
 
-/* Override the default bootstrap behavior where horizontal description lists 
-   will truncate terms that are too long to fit in the left column 
-*/
-.dl-horizontal dt {
-    white-space: normal;
+h1 {
+    border-bottom: 2px solid #333; /* Agrega un borde inferior de 2 píxeles con color negro */
 }
 
-/* Set width on the form input elements since they're 100% wide by default */
-input,
-select,
-textarea {
-    max-width: 280px;
+body {
+    font-family: Arial, sans-serif; /* Cambia la fuente del texto */
+    font-size: 16px; /* Cambia el tamaño del texto a 16 píxeles */
+}
+
+h1 {
+    font-size: 24px; /* Cambia el tamaño del texto del encabezado a 24 píxeles */
+}
+
+img {
+    display: block; /* Hace que la imagen sea un bloque en lugar de una línea de texto */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+}
+
+h1 {
+    text-align: center; /* Centra el texto del encabezado horizontalmente */
+}
+
+img:hover {
+    box-shadow: 2px 2px 5px #888; /* Agrega una sombra cuando se pasa el mouse sobre la imagen */
+    transition: box-shadow 0.3s ease; /* Agrega una transición suave a la sombra */
+}
+
+body {
+    background: linear-gradient(to bottom, #F5F5F5, #EEE); /* Agrega un gradiente de color de arriba a abajo */
 }

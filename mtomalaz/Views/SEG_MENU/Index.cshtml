@@ -1,0 +1,136 @@
+﻿@model IEnumerable<mtomalaz.DataBAse.SEG_MENU>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MEN_Id_Menu)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MEN_Descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MEN_Nivel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MEN_Tipo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MEN_Direccion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MEN_Ingreso)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MEN_Multiple)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MEN_Reporte)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MEN_Ruta)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MEN_Estado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Aud_Fecha_Ingreso)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Aud_PC_Ingreso)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Aud_Fecha_Modifica)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Aud_PC_Modifica)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SEG_EMPRESA.EMP_Representante)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SEG_ESTADO_AI.Gen_PrmSn_Descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SEG_USUARIO.USU_Login)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SEG_USUARIO1.USU_Login)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MEN_Id_Menu)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MEN_Descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MEN_Nivel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MEN_Tipo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MEN_Direccion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MEN_Ingreso)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MEN_Multiple)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MEN_Reporte)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MEN_Ruta)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MEN_Estado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Aud_Fecha_Ingreso)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Aud_PC_Ingreso)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Aud_Fecha_Modifica)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Aud_PC_Modifica)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SEG_EMPRESA.EMP_Representante)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SEG_ESTADO_AI.Gen_PrmSn_Descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SEG_USUARIO.USU_Login)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SEG_USUARIO1.USU_Login)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.SEG_MENU_Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.SEG_MENU_Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.SEG_MENU_Id })
+        </td>
+    </tr>
+}
+
+</table>

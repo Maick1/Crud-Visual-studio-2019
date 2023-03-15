@@ -1,36 +1,315 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
     <title>@ViewBag.Title - Michael Tomalá</title>
+
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+  
 
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Nombre de la aplicación", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Acerca de", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contacto", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("Usuarios", "Index", "SEG_USUARIO")</li>
+    <div>
+        <nav class="navbar navbar-expand-lg bg-light navbar-fixed-top">
+            <div class="container-fluid">
+                @*Btn Hambuger*@
+                @*<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>*@
+                @*Programación Navbar*@
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        @*Espacion separador*@
+                        <span class="navbar-toggler-icon"></span>
+                        @*Logo y Name de Empresa*@
+                        <a class="navbar-brand" href="#">
+                            <img src="~/Sources/Img/img_logo_empresa.png" alt="" width="30" height="24" />
+                        </a>
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
 
-                </ul>
-                @Html.Partial("_LoginPartial")
+                        @Html.ActionLink("Empresa S.A", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+
+                        @*General*@
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                General
+                            </a>
+                            <ul class="dropdown-menu">
+
+                                <li>@Html.ActionLink("Año", "Index", "GEN_ANIO")</li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>@Html.ActionLink("Mes", "Index", "GEN_MES")</li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>@Html.ActionLink("Discapacidad Tipo", "Index", "GEN_PRM_DISCAPCIDA_TIPO")</li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>@Html.ActionLink("Educacion", "Index", "GEN_PRM_EDUCACION_NIVEL")</li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>@Html.ActionLink("EstCivil", "Index", "GEN_PRM_ESTADO_CIVIL")</li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>@Html.ActionLink("ForPago", "Index", "GEN_PRM_FORMA_PAGO")</li>
+
+                                <li><hr class="dropdown-divider"></li>
+                                <li>@Html.ActionLink("Paises", "Index", "GEN_PRM_GEOA_PAISES")</li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>@Html.ActionLink("Provincia", "Index", "GEN_PRM_GEOE_PROVINCIA")</li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>@Html.ActionLink("Ciudad", "Index", "GEN_PRM_GEOI_CIUDAD")</li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>@Html.ActionLink("Parroquias", "Index", "GEN_PRM_GEOO_PARROQUIAS")</li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>@Html.ActionLink("OperadoraM", "Index", "GEN_PRM_OPERADORA_MOVIL")</li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>@Html.ActionLink("Parentesco", "Index", "GEN_PRM_PARENTESCO")</li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>@Html.ActionLink("Sexo", "Index", "GEN_PRM_SEXO")</li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>@Html.ActionLink("Identificacion", "Index", "GEN_TIPO_IDENTIFICACION")</li>
+                            </ul>
+                        </li>
+                        @*Seguridad*@
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Seguridad
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Usuarios", "Index", "SEG_USUARIO")</li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>@Html.ActionLink("Empresa", "Index", "SEG_EMPRESA")</li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>@Html.ActionLink("Estado", "Index", "SEG_ESTADO_AI")</li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>@Html.ActionLink("Banco", "Index", "SEG_BANCO")</li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>@Html.ActionLink("Bodega", "Index", "SEG_BODEGA")</li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>@Html.ActionLink("Purga", "Index", "SEG_CAB_PURGA")</li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>@Html.ActionLink("Costo", "Index", "SEG_CENTRO_COSTO")</li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>@Html.ActionLink("Ciudad", "Index", "SEG_CIUDAD")</li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>@Html.ActionLink("CtaBanco", "Index", "SEG_CTA_BANCO")</li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>@Html.ActionLink("Departamento", "Index", "SEG_DEPARTAMENTO")</li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>@Html.ActionLink("Det_Purga", "Index", "SEG_DET_PURGA")</li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>@Html.ActionLink("EntTip", "Index", "SEG_ENT_TIP")</li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>@Html.ActionLink("Entidad", "Index", "SEG_ENTIDAD")</li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>@Html.ActionLink("Grupo", "Index", "SEG_GRUPO")</li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>@Html.ActionLink("Historico", "Index", "SEG_HISTORICO")</li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>@Html.ActionLink("Impuesto", "Index", "SEG_IMP_BEN")</li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>@Html.ActionLink("Inicio", "Index", "SEG_INICIO")</li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>@Html.ActionLink("Mensaje", "Index", "SEG_MENSAJE")</li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>@Html.ActionLink("MENU", "Index", "SEG_MENU")</li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>@Html.ActionLink("NPrecio", "Index", "SEG_NIVEL_PRECIO")</li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>@Html.ActionLink("Pais", "Index", "SEG_PAIS")</li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>@Html.ActionLink("PerCon", "Index", "SEG_PER_CON")</li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>@Html.ActionLink("PerEmp", "Index", "SEG_PERFIL_EMP")</li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>@Html.ActionLink("Provincia", "Index", "SEG_PROVINCIA")</li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>@Html.ActionLink("Tipo", "Index", "SEG_TIPO")</li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>@Html.ActionLink("UGrupo", "Index", "SEG_USU_GRUPO")</li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>@Html.ActionLink("Zona", "Index", "SEG_ZONA")</li>
+                                <li><hr class="dropdown-divider"></li>
+
+                                <li><a class="dropdown-item" href="#">Roles</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Perfil</a></li>
+                            </ul>
+                        </li>
+                        @*Contabilidad*@
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Contabilidad
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("CenCostos", "Index", "CON_CENTRO_COSTOS")</li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>@Html.ActionLink("TiposCosto", "Index", "CON_CENTRO_COSTOS_TIPO")</li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>@Html.ActionLink("ClCuenta", "Index", "CON_CUENTA_CLASE")</li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>@Html.ActionLink("NiCuenta", "Index", "CON_CUENTA_NIVEL")</li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>@Html.ActionLink("PlCuenta", "Index", "CON_CUENTA_PLAN")</li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>@Html.ActionLink("TiCuenta", "Index", "CON_CUENTA_TIPO")</li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>@Html.ActionLink("Diario", "Index", "CON_DIARIO_AUX")</li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>@Html.ActionLink("TAuxDiario", "Index", "CON_DIARIO_AUX_TIPO")</li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>@Html.ActionLink("CabDiario", "Index", "CON_DIARIO_CAB")</li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>@Html.ActionLink("DetDiario", "Index", "CON_DIARIO_DET")</li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>@Html.ActionLink("SeDiario", "Index", "CON_DIARIO_SECUENCIA")</li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>@Html.ActionLink("TiDiario", "Index", "CON_DIARIO_TIPO")</li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>@Html.ActionLink("EstContab", "Index", "CON_ESTADO_CONTAB")</li>
+                                <li><hr class="dropdown-divider"></li>
+
+                                <li><a class="dropdown-item" href="#">Periodos</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Lotes</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Balances</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Informes</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Cierre de Mes</a></li>
+                            </ul>
+                        </li>
+                        @*Compras*@
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Compras
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><hr class="dropdown-divider"></li>
+                                <li>@Html.ActionLink("CabDev", "Index", "COM_CAB_DEV")</li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>@Html.ActionLink("Cab_Orden", "Index", "COM_CAB_ORDEN")</li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>@Html.ActionLink("CatProveedor", "Index", "COM_CATEGORIA_PROVEEDORES")</li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>@Html.ActionLink("DetalleDev", "Index", "COM_DET_DEV")</li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>@Html.ActionLink("DetOrden", "Index", "COM_DET_ORDEN")</li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>@Html.ActionLink("Proveedor", "Index", "COM_PROVEEDOR")</li>
+
+
+                                <li><a class="dropdown-item" href="#">Proveedor</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">_Ordenes</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Informes</a></li>
+                            </ul>
+                        </li>
+                        @*Ventas*@
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Ventas
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><hr class="dropdown-divider"></li>
+                                <li>@Html.ActionLink("ARTICULOS", "Index", "INV_ARTICULOS")</li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>@Html.ActionLink("Kardex", "Index", "INV_CAB_KARDEX")</li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>@Html.ActionLink("Movimiento", "Index", "INV_CAB_MOVIMIENTO")</li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>@Html.ActionLink("Solicitud", "Index", "INV_CAB_SOLICITUD")</li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>@Html.ActionLink("Categoria", "Index", "INV_CATEGORIA")</li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>@Html.ActionLink("DetKardex", "Index", "INV_DET_KARDEX")</li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>@Html.ActionLink("DetMovimiento", "Index", "INV_DET_MOVIMIENTO")</li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>@Html.ActionLink("DetSolicitud", "Index", "INV_DET_SOLICITUD")</li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>@Html.ActionLink("Marca", "Index", "INV_MARCA")</li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>@Html.ActionLink("Subtipo", "Index", "INV_SUBTIPO")</li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>@Html.ActionLink("TiArticulo", "Index", "INV_TIPO_ARTICULO")</li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>@Html.ActionLink("SubArt", "Index", "INV_TIPSUBART")</li>
+
+
+
+                                <li><a class="dropdown-item" href="#">Clientes</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Facturación</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Informes</a></li>
+                            </ul>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Banco
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Bancos", "Index", "BCO_BANCOS")</li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>@Html.ActionLink("Codigo Financiero", "Index", "BCO_CODIGO_FINANCIERO")</li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>@Html.ActionLink("Cuenta Bancos", "Index", "BCO_CUENTA_BANCOS")</li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>@Html.ActionLink("Cuenta tipo", "Index", "BCO_CUENTA_TIPO")</li>
+                                <li><hr class="dropdown-divider"></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Nomina
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Empleado Tipo", "Index", "NOM_EMPLEADO_TIPO")</li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>@Html.ActionLink("Empleados", "Index", "NOM_EMPLEADOS")</li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>@Html.ActionLink("Vendedor Tipo", "Index", "NOM_VENDEDOR_TIPO")</li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>@Html.ActionLink("Vendedores", "Index", "NOM_VENDEDORES")</li>
+                                <li><hr class="dropdown-divider"></li>
+                            </ul>
+                        </li>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled">Marketing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled">Nomina</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="container navbar-right">
+                    <div class="dropdown text-right">
+                        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-start">
+                            <li><a class="dropdown-item" href="#">_Foto</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Clave</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Cerrar Sesión</a></li>
+                        </ul>
+                        <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="~/Sources/Img/Img_Logo_User_2.png" alt="" width="30" height="24" />
+                        </a>
+                    </div>
+                </div>
             </div>
-        </div>
+
+        </nav>
     </div>
     <div class="container body-content">
         @RenderBody()

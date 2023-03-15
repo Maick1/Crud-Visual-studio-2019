@@ -1,0 +1,227 @@
+﻿@model mtomalaz.DataBAse.SEG_ENTIDAD
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>SEG_ENTIDAD</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ENT_Id_Entidad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ENT_Id_Entidad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ENT_Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ENT_Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ENT_Apellido)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ENT_Apellido)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ENT_Ced_Ruc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ENT_Ced_Ruc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ENT_Est_Civil)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ENT_Est_Civil)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ENT_Titulo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ENT_Titulo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ENT_Sexo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ENT_Sexo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ENT_Persona)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ENT_Persona)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ENT_Direccion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ENT_Direccion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ENT_Telefono)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ENT_Telefono)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ENT_Fax)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ENT_Fax)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ENT_Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ENT_Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PAI_Continente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PAI_Continente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PAI_Id_Pais)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PAI_Id_Pais)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRO_Id_Provin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRO_Id_Provin)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CIU_Id_Ciudad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CIU_Id_Ciudad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ENT_Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ENT_Descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ENT_Estado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ENT_Estado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Aud_Fecha_Ingreso)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Aud_Fecha_Ingreso)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Aud_PC_Ingreso)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Aud_PC_Ingreso)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Aud_Fecha_Modifica)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Aud_Fecha_Modifica)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Aud_PC_Modifica)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Aud_PC_Modifica)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SEG_EMPRESA.EMP_Representante)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SEG_EMPRESA.EMP_Representante)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SEG_ESTADO_AI.Gen_PrmSn_Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SEG_ESTADO_AI.Gen_PrmSn_Descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SEG_USUARIO.USU_Login)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SEG_USUARIO.USU_Login)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SEG_USUARIO1.USU_Login)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SEG_USUARIO1.USU_Login)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.SEG_ENTIDAD_Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

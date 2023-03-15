@@ -1,0 +1,364 @@
+﻿@model IEnumerable<mtomalaz.DataBAse.NOM_EMPLEADOS>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nom_Epd_Documento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nom_Epd_Nombre1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nom_Epd_Nombre2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nom_Epd_Apellido1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nom_Epd_Apellido2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nom_Epd_Mail_Personal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nom_Epd_Mail_Empresa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nom_Epd_Movil)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nom_Epd_FecNac)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nom_Epd_Foto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nom_Epd_Discap_Porc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nom_Epd_Discap_Grad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nom_Epd_Discap_Carnet_Num)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nom_Epd_Direccion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nom_Epd_Direccion_Referen)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nom_Epd_Procedencia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nom_Epd_Banco_Cuenta)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nom_Epd_Contac_Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nom_Epd_Contac_Apellido)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nom_Epd_Contac_Telefono)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nom_Epd_Contac_Documento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nom_Epd_Contac_Direccion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nom_Epd_Codigo_Reloj0)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nom_Epd_Codigo_Reloj1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nom_Epd_Codigo_Reloj2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nom_Epd_Codigo_Reloj3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nom_Epd_Codigo_Reloj4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nom_Epd_Contrato)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Aud_Fecha_Ingreso)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Aud_PC_Ingreso)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Aud_Fecha_Modifica)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Aud_PC_Modifica)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BCO_BANCOS.Bco_Ban_Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BCO_CUENTA_TIPO.Bco_CtaTipo_Descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GEN_PRM_DISCAPCIDA_TIPO.Gen_DisT_Descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GEN_PRM_EDUCACION_NIVEL.Gen_PrmEducN_Descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GEN_PRM_ESTADO_CIVL.Gen_PrmCivilE_Descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GEN_PRM_FORMA_PAGO.Gen_PrmForPag_Descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GEN_PRM_GEOA_PAISES.Gen_PrmPai_Codigo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GEN_PRM_GEOE_PROVINCIAS.Gen_PrmPro_Codigo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GEN_PRM_GEOI_CIUDAD.Gen_PrmCiu_Codigo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GEN_PRM_GEOO_PARROQUIAS.Gen_PrmPrq_Codigo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GEN_PRM_OPERADORA_MOVIL.Gen_PrmOperM_Descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GEN_PRM_PARENTESCO.Gen_PrmParenT_Descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GEN_PRM_SEXO.Gen_PrmSex_Descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GEN_TIPO_IDENTIFICACION.Gen_TipIden_Descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GEN_TIPO_IDENTIFICACION1.Gen_TipIden_Descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NOM_EMPLEADO_TIPO.Nom_EpdTip_Descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SEG_EMPRESA.EMP_Representante)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SEG_ESTADO_AI.Gen_PrmSn_Descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SEG_USUARIO.USU_Login)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SEG_USUARIO1.USU_Login)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SEG_ESTADO_AI1.Gen_PrmSn_Descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SEG_ESTADO_AI2.Gen_PrmSn_Descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SEG_ESTADO_AI3.Gen_PrmSn_Descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SEG_USUARIO2.USU_Login)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nom_Epd_Documento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nom_Epd_Nombre1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nom_Epd_Nombre2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nom_Epd_Apellido1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nom_Epd_Apellido2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nom_Epd_Mail_Personal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nom_Epd_Mail_Empresa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nom_Epd_Movil)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nom_Epd_FecNac)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nom_Epd_Foto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nom_Epd_Discap_Porc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nom_Epd_Discap_Grad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nom_Epd_Discap_Carnet_Num)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nom_Epd_Direccion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nom_Epd_Direccion_Referen)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nom_Epd_Procedencia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nom_Epd_Banco_Cuenta)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nom_Epd_Contac_Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nom_Epd_Contac_Apellido)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nom_Epd_Contac_Telefono)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nom_Epd_Contac_Documento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nom_Epd_Contac_Direccion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nom_Epd_Codigo_Reloj0)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nom_Epd_Codigo_Reloj1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nom_Epd_Codigo_Reloj2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nom_Epd_Codigo_Reloj3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nom_Epd_Codigo_Reloj4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nom_Epd_Contrato)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Aud_Fecha_Ingreso)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Aud_PC_Ingreso)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Aud_Fecha_Modifica)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Aud_PC_Modifica)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BCO_BANCOS.Bco_Ban_Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BCO_CUENTA_TIPO.Bco_CtaTipo_Descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GEN_PRM_DISCAPCIDA_TIPO.Gen_DisT_Descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GEN_PRM_EDUCACION_NIVEL.Gen_PrmEducN_Descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GEN_PRM_ESTADO_CIVL.Gen_PrmCivilE_Descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GEN_PRM_FORMA_PAGO.Gen_PrmForPag_Descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GEN_PRM_GEOA_PAISES.Gen_PrmPai_Codigo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GEN_PRM_GEOE_PROVINCIAS.Gen_PrmPro_Codigo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GEN_PRM_GEOI_CIUDAD.Gen_PrmCiu_Codigo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GEN_PRM_GEOO_PARROQUIAS.Gen_PrmPrq_Codigo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GEN_PRM_OPERADORA_MOVIL.Gen_PrmOperM_Descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GEN_PRM_PARENTESCO.Gen_PrmParenT_Descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GEN_PRM_SEXO.Gen_PrmSex_Descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GEN_TIPO_IDENTIFICACION.Gen_TipIden_Descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GEN_TIPO_IDENTIFICACION1.Gen_TipIden_Descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NOM_EMPLEADO_TIPO.Nom_EpdTip_Descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SEG_EMPRESA.EMP_Representante)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SEG_ESTADO_AI.Gen_PrmSn_Descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SEG_USUARIO.USU_Login)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SEG_USUARIO1.USU_Login)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SEG_ESTADO_AI1.Gen_PrmSn_Descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SEG_ESTADO_AI2.Gen_PrmSn_Descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SEG_ESTADO_AI3.Gen_PrmSn_Descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SEG_USUARIO2.USU_Login)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Nom_Epd_Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Nom_Epd_Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Nom_Epd_Id })
+        </td>
+    </tr>
+}
+
+</table>

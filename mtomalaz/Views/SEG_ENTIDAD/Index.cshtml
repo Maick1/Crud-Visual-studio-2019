@@ -1,0 +1,184 @@
+﻿@model IEnumerable<mtomalaz.DataBAse.SEG_ENTIDAD>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ENT_Id_Entidad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ENT_Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ENT_Apellido)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ENT_Ced_Ruc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ENT_Est_Civil)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ENT_Titulo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ENT_Sexo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ENT_Persona)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ENT_Direccion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ENT_Telefono)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ENT_Fax)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ENT_Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PAI_Continente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PAI_Id_Pais)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PRO_Id_Provin)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CIU_Id_Ciudad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ENT_Descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ENT_Estado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Aud_Fecha_Ingreso)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Aud_PC_Ingreso)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Aud_Fecha_Modifica)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Aud_PC_Modifica)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SEG_EMPRESA.EMP_Representante)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SEG_ESTADO_AI.Gen_PrmSn_Descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SEG_USUARIO.USU_Login)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SEG_USUARIO1.USU_Login)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ENT_Id_Entidad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ENT_Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ENT_Apellido)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ENT_Ced_Ruc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ENT_Est_Civil)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ENT_Titulo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ENT_Sexo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ENT_Persona)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ENT_Direccion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ENT_Telefono)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ENT_Fax)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ENT_Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PAI_Continente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PAI_Id_Pais)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRO_Id_Provin)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CIU_Id_Ciudad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ENT_Descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ENT_Estado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Aud_Fecha_Ingreso)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Aud_PC_Ingreso)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Aud_Fecha_Modifica)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Aud_PC_Modifica)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SEG_EMPRESA.EMP_Representante)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SEG_ESTADO_AI.Gen_PrmSn_Descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SEG_USUARIO.USU_Login)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SEG_USUARIO1.USU_Login)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.SEG_ENTIDAD_Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.SEG_ENTIDAD_Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.SEG_ENTIDAD_Id })
+        </td>
+    </tr>
+}
+
+</table>
